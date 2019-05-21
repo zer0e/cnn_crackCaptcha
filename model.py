@@ -178,7 +178,7 @@ class Model(object):
 def main():
 
     mymodel = Model("mymodel")
-    #mymodel.train()
+    mymodel.train()
     mymodel.predict(1000)
 
 
