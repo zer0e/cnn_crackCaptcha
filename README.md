@@ -11,15 +11,15 @@ use cnn to crack captcha by keras
 而使用卷积神经网络，只需简单进行图片操作，或者甚至不用对图片操作就可以实现对干扰型验证的识别。
 
 ### 项目依赖
-'''
+```
 numpy==1.16.2 
 tensorflow==1.13.1 
 Pillow==6.0.0 
 easydict==1.9 
-'''
+```
 
 ### 项目结构
-'''
+```
 |-- images
 |   |-- origin
 |   |-- test
@@ -34,7 +34,7 @@ easydict==1.9
 |-- requirements.txt
 |-- settings.py
 |-- sort_images.py
-'''
+```
 
 ### 模型结构
 ![model](https://github.com/zer0e/cnn_crackCaptcha/raw/master/mymodel.png)
@@ -53,7 +53,7 @@ easydict==1.9
 
 
 ## TODO
-1.搭建一个web服务，使之可以进行远程调用。
+1.搭建一个web服务，使之可以进行远程调用。 
 2.模型的优化。本项目采用了类似VGG-16的模型，但从实际的状况来看，该模型并不完美。
 
 
