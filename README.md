@@ -1,4 +1,5 @@
 # cnn_crackCaptcha
+<<<<<<< HEAD
 use cnn to crack captcha by keras  
 本项目使用keras api实现卷积神经网络对验证码进行识别。
 
@@ -22,3 +23,8 @@ easydict==1.9
 ![model](https://github.com/zer0e/cnn_crackCaptcha/raw/master/mymodel.png)
 
 
+=======
+use cnn to crack captcha  
+
+to be finished...
+>>>>>>> 80c0ce6a6e05822fd47f42b2a88c1655c3c122e4
