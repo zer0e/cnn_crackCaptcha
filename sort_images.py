@@ -1,12 +1,12 @@
 import os
-import random
+import random,time
 from settings import settings
 from PIL import Image
 import shutil
 
 def check(origin_images_path):
     print("开始验证原始图片集....")
-
+    time.sleep(3)
     right_size = (settings.image_width, settings.image_height)
     sort_identifier = settings.sort_identifier
     captcha_len = settings.captcha_len

@@ -24,11 +24,12 @@ class Model(object):
 
     def check_model_exist(self):
         '''
-        判断是否存在模型
+        判断是否存在模型 存在的话询问是否加载
         :return:
         '''
         if os.path.exists(os.path.join(self.model_save_dir,self.model_name + ".h5")):
             print("存在同名模型，正在读取该模型....")
+            time.sleep(3)
             self.model = tf.keras.models.load_model(
                 os.path.join(self.model_save_dir, self.model_name + '.h5'))
             if self.model:
@@ -37,6 +38,7 @@ class Model(object):
             else:
                 print("模型加载失败....")
         print("开始创建模型....")
+        time.sleep(3)
         self.model = self.cnn_model()
         return False
 
@@ -186,7 +188,7 @@ def main():
 
 #    mymodel = Model("captcha_model")
     mymodel = Model("skl_captcha_model")
-    img = Image.open("test.jpg")
+    img = Image.open("images/examples/5295_2997b4e0879c82e85eda6ba3b7dc58d7.jpg")
     print(mymodel.predict_from_img(img))
     # mymodel.train()
     # mymodel.predict(1000)
