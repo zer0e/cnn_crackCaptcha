@@ -9,11 +9,15 @@ __pycache__/
 # Distribution / packaging
 logs/
 .vscode/
+test.jpg
 images/origin
 images/train
 images/test
 images/train1
 images/test1
+images/train2
+images/test2
+images/captcha.ttf
 model/
 .Python
 build/
