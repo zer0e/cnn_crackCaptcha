@@ -9,5 +9,10 @@ proc_num
 number=$?
 if [ $number -eq 0 ]
 then
-        cd $path; python3 checkin.py
+        cd $path; python3 recognize_api.py
+else
+        id=`ps -ef | grep $proc_name | grep -v grep | awk '{print $2}'`
+        `kill -s 9 $id`
+        cd $path; python3 recognize_api.py
 fi
+
