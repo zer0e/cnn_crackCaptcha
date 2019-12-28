@@ -143,7 +143,7 @@ class Model(object):
 
         ]
         self.model.fit_generator(self.gen_from_local(self.train_images_path), steps_per_epoch=2000, epochs=5,
-                                 validation_data=self.gen_from_local(self.test_images_path), validation_steps=1024,
+                                 validation_data=self.gen_from_local(self.test_images_path), validation_steps=512,
                                  callbacks=callback_list)
         print("训练完成，正在保存模型....")
         self.model.save(os.path.join(
@@ -183,13 +183,9 @@ class Model(object):
         return y_
 
 def main():
-
-#    mymodel = Model("captcha_model")
     mymodel = Model("skl_captcha_model")
-    img = Image.open("test.jpg")
-    print(mymodel.predict_from_img(img))
-    # mymodel.train()
-    # mymodel.predict(1000)
+    mymodel.train()
+    mymodel.predict(1000)
 
 
 if __name__ == "__main__":
